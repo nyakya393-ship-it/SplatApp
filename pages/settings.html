@@ -1,1 +1,1090 @@
+<section class="settings-page">
 
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h1 class="page-section-title">
+
+                設定
+
+            </h1>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Account
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                アカウント
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        Nintendo Account連携
+
+                    </h3>
+
+
+                    <p>
+
+                        戦績データ取得用のアカウント設定
+
+                    </p>
+
+
+                </div>
+
+
+
+                <button
+
+                    id="accountConnect"
+
+                    class="btn btn-primary"
+
+                >
+
+                    連携する
+
+                </button>
+
+
+            </div>
+
+
+
+            <div
+
+                id="accountStatus"
+
+                class="settings-status"
+
+            >
+
+                未連携
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Data Acquisition
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                データ取得
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        自動取得
+
+                    </h3>
+
+
+                    <p>
+
+                        バトル終了後にデータを確認します
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="autoFetch"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        スケジュール更新
+
+                    </h3>
+
+
+                    <p>
+
+                        ステージ情報を自動更新します
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="autoSchedule"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Storage
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                データ管理
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        保存データ数
+
+                    </h3>
+
+
+                    <p
+
+                        id="savedDataCount"
+
+                    >
+
+                        --
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="data-actions">
+
+
+                <button
+
+                    id="backupData"
+
+                    class="btn btn-secondary"
+
+                >
+
+                    バックアップ
+
+                </button>
+
+
+
+                <button
+
+                    id="clearData"
+
+                    class="btn btn-danger"
+
+                >
+
+                    データ削除
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+        <!-- =========================
+         Notification Settings
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                通知設定
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        試合終了通知
+
+                    </h3>
+
+
+                    <p>
+
+                        バトル結果の保存通知
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="battleNotification"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        スケジュール通知
+
+                    </h3>
+
+
+                    <p>
+
+                        ステージ変更を通知
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="scheduleNotification"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        サーモンラン通知
+
+                    </h3>
+
+
+                    <p>
+
+                        シフト変更を通知
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="salmonNotification"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Display Settings
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                表示設定
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        ダークモード
+
+                    </h3>
+
+
+                    <p>
+
+                        画面テーマを変更します
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="darkMode"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        コンパクト表示
+
+                    </h3>
+
+
+                    <p>
+
+                        戦績カードを小さく表示
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="compactMode"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Sync Settings
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                同期設定
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        最終同期
+
+                    </h3>
+
+
+                    <p
+
+                        id="lastSyncTime"
+
+                    >
+
+                        --
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+
+                id="manualSync"
+
+                class="btn btn-primary"
+
+            >
+
+                今すぐ同期
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         App Information
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                アプリ情報
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        InkWidget3 Clone
+
+                    </h3>
+
+
+                    <p>
+
+                        Version 0.1.0
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="data-actions">
+
+
+                <button
+
+                    id="logoutButton"
+
+                    class="btn btn-danger"
+
+                >
+
+                    ログアウト
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+        <!-- =========================
+         Advanced Settings
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                詳細設定
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        バックグラウンド更新
+
+                    </h3>
+
+
+                    <p>
+
+                        アプリを開いた時に自動更新します
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="backgroundUpdate"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        詳細ログ
+
+                    </h3>
+
+
+                    <p>
+
+                        データ取得状況を記録します
+
+                    </p>
+
+
+                </div>
+
+
+
+                <label class="switch">
+
+
+                    <input
+
+                        type="checkbox"
+
+                        id="debugLog"
+
+                    >
+
+
+                    <span class="slider"></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Data Export
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                データ管理
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="settings-card">
+
+
+            <div class="settings-row">
+
+
+                <div class="settings-info">
+
+
+                    <h3>
+
+                        戦績データを書き出す
+
+                    </h3>
+
+
+                    <p>
+
+                        保存したデータをファイル化します
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="data-actions">
+
+
+                <button
+
+                    id="exportBattleData"
+
+                    class="btn btn-primary"
+
+                >
+
+                    エクスポート
+
+                </button>
+
+
+
+                <button
+
+                    id="importBattleData"
+
+                    class="btn btn-secondary"
+
+                >
+
+                    インポート
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Reset
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="settings-card danger">
+
+
+            <div class="settings-info">
+
+
+                <h3>
+
+                    アプリデータ初期化
+
+                </h3>
+
+
+                <p>
+
+                    保存した設定と戦績データを削除します
+
+                </p>
+
+
+            </div>
+
+
+
+            <button
+
+                id="resetApplication"
+
+                class="btn btn-danger"
+
+            >
+
+                初期化する
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Information
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="settings-card">
+
+
+            <h3>
+
+                情報
+
+            </h3>
+
+
+
+            <p>
+
+                InkWidget3 Clone
+
+            </p>
+
+
+
+            <p>
+
+                Splatoon 3向け戦績管理・分析アプリ
+
+            </p>
+
+
+
+            <p>
+
+                Version 0.1.0
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+</section>
