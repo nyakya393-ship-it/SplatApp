@@ -309,3 +309,91 @@ card.appendChild(
 
 
 }
+function renderBattleDetail(){
+
+
+    const area =
+        document.getElementById(
+            "battleDetail"
+        );
+
+
+    if(!area){
+
+        return;
+
+    }
+
+
+    const params =
+        new URLSearchParams(
+            location.hash.split("?")[1]
+        );
+
+
+    const id =
+        params.get("id");
+
+
+    const battle =
+        getBattleById(id);
+
+
+
+    if(!battle){
+
+        area.innerHTML =
+        "データがありません";
+
+        return;
+
+    }
+
+
+
+    area.innerHTML = `
+
+
+    <h3>
+
+    ${battle.stage}
+
+    </h3>
+
+
+    <p>
+
+    結果:
+    ${battle.result}
+
+    </p>
+
+
+    <p>
+
+    キル:
+    ${battle.kills}
+
+    </p>
+
+
+    <p>
+
+    デス:
+    ${battle.deaths}
+
+    </p>
+
+
+    <p>
+
+    塗り:
+    ${battle.paint}
+
+    </p>
+
+
+    `;
+
+
+}
