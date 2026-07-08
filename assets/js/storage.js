@@ -546,3 +546,25 @@ function getLatestBattles(limit = 10){
 
 
 }
+// =========================
+// Battle Detail
+// =========================
+
+
+function getBattleById(id){
+
+
+    const battles =
+        getBattles();
+
+
+
+    return battles.find(
+
+        battle =>
+            battle.id == id
+
+    );
+
+
+}
