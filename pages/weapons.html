@@ -1,1 +1,1068 @@
+<section class="weapons-page">
 
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h1 class="page-section-title">
+
+                ブキ分析
+
+            </h1>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Weapon Summary
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                使用状況
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="dashboard-grid">
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    使用ブキ数
+
+                </div>
+
+
+                <div
+
+                    id="usedWeaponCount"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    総試合数
+
+                </div>
+
+
+                <div
+
+                    id="weaponTotalGames"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    最高勝率ブキ
+
+                </div>
+
+
+                <div
+
+                    id="bestWeapon"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    人気ブキ
+
+                </div>
+
+
+                <div
+
+                    id="favoriteWeapon"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Weapon Ranking
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                ブキランキング
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="filter-row">
+
+
+            <button
+
+                class="filter-button active"
+
+                data-sort="usage"
+
+            >
+
+                使用回数
+
+            </button>
+
+
+
+            <button
+
+                class="filter-button"
+
+                data-sort="winrate"
+
+            >
+
+                勝率
+
+            </button>
+
+
+
+            <button
+
+                class="filter-button"
+
+                data-sort="kills"
+
+            >
+
+                キル
+
+            </button>
+
+
+
+            <button
+
+                class="filter-button"
+
+                data-sort="paint"
+
+            >
+
+                塗り
+
+            </button>
+
+
+        </div>
+
+
+
+        <div
+
+            id="weaponRanking"
+
+            class="weapon-list"
+
+        >
+
+
+            <!-- JavaScript生成 -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Weapon Card Template
+    ========================== -->
+
+
+    <template id="weaponCardTemplate">
+
+
+        <article class="weapon-card">
+
+
+            <div class="weapon-header">
+
+
+                <div class="weapon-icon">
+
+                </div>
+
+
+                <div class="weapon-name">
+
+                    ブキ名
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="weapon-stats">
+
+
+                <div>
+
+
+                    <span>
+
+                        使用回数
+
+                    </span>
+
+
+                    <strong class="weapon-uses">
+
+                        --
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div>
+
+
+                    <span>
+
+                        勝率
+
+                    </span>
+
+
+                    <strong class="weapon-winrate">
+
+                        --
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div>
+
+
+                    <span>
+
+                        平均キル
+
+                    </span>
+
+
+                    <strong class="weapon-kills">
+
+                        --
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+    </template>
+        <!-- =========================
+         Stage Performance
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                ステージ別成功率
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="filter-row">
+
+
+            <button
+
+                class="filter-button active"
+
+                data-stage-filter="all"
+
+            >
+
+                全ステージ
+
+            </button>
+
+
+            <button
+
+                class="filter-button"
+
+                data-stage-filter="high"
+
+            >
+
+                得意
+
+            </button>
+
+
+            <button
+
+                class="filter-button"
+
+                data-stage-filter="low"
+
+            >
+
+                苦手
+
+            </button>
+
+
+        </div>
+
+
+
+        <div
+
+            id="stagePerformance"
+
+            class="analysis-list"
+
+        >
+
+
+            <!-- JavaScript生成 -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Rule Performance
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                ルール別成績
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="dashboard-grid">
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    ナワバリ
+
+                </div>
+
+
+                <div
+
+                    id="ruleTurf"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    ガチエリア
+
+                </div>
+
+
+                <div
+
+                    id="ruleArea"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    ガチヤグラ
+
+                </div>
+
+
+                <div
+
+                    id="ruleTower"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    ガチホコ
+
+                </div>
+
+
+                <div
+
+                    id="ruleRainmaker"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Special Performance
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                スペシャル別成功率
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div
+
+            id="specialPerformance"
+
+            class="analysis-list"
+
+        >
+
+
+            <!-- JavaScript生成 -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Weapon Stage Compatibility
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                ブキ×ステージ相性
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="data-card">
+
+
+            <div class="data-title">
+
+                相性分析
+
+            </div>
+
+
+            <div
+
+                id="weaponStageMatch"
+
+                class="data-description"
+
+            >
+
+                ブキごとの得意ステージを表示します。
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+        <!-- =========================
+         K/D Analysis
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                キルデス分析
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="dashboard-grid">
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    平均キル
+
+                </div>
+
+
+                <div
+
+                    id="averageKill"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    平均デス
+
+                </div>
+
+
+                <div
+
+                    id="averageDeath"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    K/D比
+
+                </div>
+
+
+                <div
+
+                    id="kdRatio"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="dashboard-item">
+
+
+                <div class="dashboard-label">
+
+                    平均スペシャル
+
+                </div>
+
+
+                <div
+
+                    id="averageSpecial"
+
+                    class="dashboard-value"
+
+                >
+
+                    --
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Trend Analysis
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                最近の傾向
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div
+
+            id="recentTrend"
+
+            class="data-card"
+
+        >
+
+
+            <div class="data-title">
+
+                プレイ傾向
+
+            </div>
+
+
+            <div class="data-description">
+
+
+                最近の勝率・キル数・使用ブキの変化を表示します。
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         XP History
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                XP推移
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div
+
+            id="xpChart"
+
+            class="chart-container"
+
+        >
+
+
+            <!-- Chart表示予定 -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Weak Weapons
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="page-section-header">
+
+
+            <h2 class="page-section-title">
+
+                苦手ブキ分析
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div
+
+            id="weakWeaponList"
+
+            class="analysis-list"
+
+        >
+
+
+            <!-- JavaScript生成 -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Data Control
+    ========================== -->
+
+
+    <section class="page-section">
+
+
+        <div class="data-actions">
+
+
+            <button
+
+                id="refreshWeaponData"
+
+                class="btn btn-primary"
+
+            >
+
+                データ更新
+
+            </button>
+
+
+
+            <button
+
+                id="saveWeaponAnalysis"
+
+                class="btn btn-secondary"
+
+            >
+
+                分析を保存
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         Loading / Error
+    ========================== -->
+
+
+    <section
+
+        id="weaponLoading"
+
+        class="loading-page hidden"
+
+    >
+
+
+        <div class="spinner">
+
+        </div>
+
+
+        <p class="loading-text">
+
+            分析データ取得中...
+
+        </p>
+
+
+    </section>
+
+
+
+    <section
+
+        id="weaponError"
+
+        class="error-page hidden"
+
+    >
+
+
+        <h2>
+
+            分析データを取得できませんでした
+
+        </h2>
+
+
+        <button
+
+            id="weaponRetry"
+
+            class="btn btn-primary"
+
+        >
+
+            再試行
+
+        </button>
+
+
+    </section>
