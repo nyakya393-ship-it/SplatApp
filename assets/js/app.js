@@ -11,8 +11,11 @@ document.addEventListener(
 
         initRouter();
 
+initTabs();
 
-        initTabs();
+initAccountButton();
+
+renderBattleList();
 
 
     }
