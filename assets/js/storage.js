@@ -477,3 +477,72 @@ function saveNintendoAccount(account){
     );
 
 }
+// =========================
+// Imported Battle Data
+// =========================
+
+
+function importBattles(battles){
+
+
+    const data =
+        getStorageData();
+
+
+
+    battles.forEach(
+        battle=>{
+
+
+            data.battles.push({
+
+                id:
+                    Date.now()
+                    +
+                    Math.random(),
+
+
+                ...battle
+
+            });
+
+
+        }
+    );
+
+
+
+    saveStorageData(
+        data
+    );
+
+
+}
+
+
+
+
+// 最新戦績取得
+
+function getLatestBattles(limit = 10){
+
+
+    const battles =
+        getBattles();
+
+
+
+    return battles
+
+        .sort(
+            (a,b)=>
+                b.id - a.id
+        )
+
+        .slice(
+            0,
+            limit
+        );
+
+
+}
